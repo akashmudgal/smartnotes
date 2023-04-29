@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block title %}Signup for SmartNotes{% endblock title %}
+{% block content %}
+<form method='POST' class='signup-form'>
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" value='Signup' class='btn btn-primary'/>
+</form>
+{% endblock content %}
